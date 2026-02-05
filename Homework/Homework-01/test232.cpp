@@ -1,29 +1,28 @@
 #include <iostream>
-#include <cstring>
 #include <bitset>
+#include <cstring>
 
 using namespace std;
 
-void chartobinary(char c) {
+// Function to convert char to binary
+void charToBinary(char c) {
     bitset<8> b(c);
     cout << "Binary (char): " << b << endl;
 }
 
-/////////////////////////////
-
-void inttobinary(int n) {
+// Function to convert int to binary
+void intToBinary(int n) {
     bitset<32> b(n);
     cout << "Binary (int): " << b << endl;
 }
-/////////////////////////////
 
-void floattobinary(float f) {
+// Function to convert float to binary
+void floatToBinary(float f) {
     int bits;
     memcpy(&bits, &f, sizeof(float));
     bitset<32> b(bits);
     cout << "Binary (float): " << b << endl;
 }
-/////////////////////////////
 
 int main() {
     int choice;
@@ -38,19 +37,19 @@ int main() {
         char c;
         cout << "Enter a character: ";
         cin >> c;
-        chartobinary(c);
+        charToBinary(c);
     }
     else if (choice == 2) {
         int n;
         cout << "Enter an integer: ";
         cin >> n;
-        inttobinary(n);
+        intToBinary(n);
     }
     else if (choice == 3) {
         float f;
         cout << "Enter a float: ";
         cin >> f;
-        floattobinary(f);
+        floatToBinary(f);
     }
     else {
         cout << "Invalid choice" << endl;
