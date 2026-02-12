@@ -8,6 +8,8 @@ string country;
 cout << "Enter a country: ";
 getline(cin, country);
 
-cout << "WOAH, I LOVE " << country << ". What part of " << country << " do you come from?" << endl;
+cout << "WOAH, I LOVE " << country << ". What part of " << country << " are you from?" << endl;
 
+
+return 0;
 }
